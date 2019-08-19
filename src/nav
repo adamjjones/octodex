@@ -1,0 +1,9 @@
+import React, { Component } from 'react'
+
+class nav extends Componet {
+  render() {
+    ;<h1>H1</h1>
+  }
+}
+
+export default nav

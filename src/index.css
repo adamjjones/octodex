@@ -30,6 +30,12 @@ body {
 .link {
   margin: 0;
   padding-right: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.body {
+  background-color: #eeeeee;
 }
 
 .bold {
@@ -39,7 +45,8 @@ body {
 }
 
 .catimages {
-  width: 350px;
-  height: 350px;
-  padding: 20px;
+  width: 300px;
+  height: 300px;
+  padding: 40px;
+  border-radius: 50px;
 }

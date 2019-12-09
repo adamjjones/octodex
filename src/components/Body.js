@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import sentry from './images/Sentrytocat_octodex.jpg'
 import fire from './images/surfcat.png'
 import liberty from './images/octoliberty.png'
 import punkcat from './images/daftpunkcat.gif'
@@ -11,66 +10,48 @@ const octocats = [
     number: '#145',
     name: 'Fire Fighter Octocat',
     url: fire,
-    alt: 'Fire Fighter Octocat'
+    alt: 'FireFighterOctocat'
   },
   {
     number: '#104',
     name: 'Liberty Octocat',
-    url: fire,
-    alt: 'Liberty Octocat'
+    url: liberty,
+    alt: 'octoliberty'
   },
   {
     number: '#102',
     name: 'DaftPunk Octocat',
-    url: fire,
+    url: punkcat,
     alt: 'DaftPunkOctocat'
   },
   {
     number: '#89',
     name: 'Spider Octocat',
-    url: fire,
+    url: spider,
     alt: 'Spider Octocat'
   },
   {
     number: '#80',
     name: 'Droid Octocat',
-    url: fire,
+    url: droid,
     alt: 'Droid Octocat'
   }
 ]
 
-// class OctoCats extends Component {
-//   render() {
-//     return (
-//       <p>
-//         {octocats.map(character => {
-//           return (
-//             <Octocat
-//               number={octocats.number}
-//               name={octocats.name}
-//               url={octocats.url}
-//               alt={octocats.alt}
-//             />
-//           )
-//         })}
-//       </p>
-//     )
-//   }
-// }
 
-class body extends Component {
+class Body extends Component {
   render() {
-    return (
-      <div className="body">
-        <img className="catimages" src={sentry} />
-        <img className="catimages" src={fire} />
-        <img className="catimages" src={liberty} />
-        <img className="catimages" src={punkcat} />
-        <img className="catimages" src={spider} />
-        <img className="catimages" src={droid} />
-      </div>
-    )
+    return octocats.map(cat => {
+      return (
+        <div className="body" key={cat.number}>
+          <img className="catimages" src={cat.url} alt="Octocats" />
+          <a href="{https://octodex.github.com/} + {cat.alt}">
+            <p className="name">{cat.name}</p>
+          </a>
+        </div>
+      )
+    })
   }
 }
 
-export default body
+export default Body
